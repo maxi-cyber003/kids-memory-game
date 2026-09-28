@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kleinkinder Spiele - Memory & Muster</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎮 Spiele für Kleinkinder</h1>
+            <p>Lerne spielend neue Dinge!</p>
+        </header>
+
+        <nav class="game-menu">
+            <button class="menu-btn active" onclick="switchGame('memory')">🎯 Memory</button>
+            <button class="menu-btn" onclick="switchGame('shapes')">🔷 Formen</button>
+            <button class="menu-btn" onclick="switchGame('colors')">🎨 Farben</button>
+            <button class="menu-btn" onclick="switchGame('counting')">🔢 Zahlen</button>
+        </nav>
+
+        <!-- MEMORY SPIEL -->
+        <section id="memory-game" class="game-section active">
+            <div class="game-header">
+                <h2>🎯 Memory Spiel</h2>
+                <div class="score-board">
+                    <p>Punkte: <span id="memory-score">0</span></p>
+                    <p>Paare: <span id="memory-pairs">0</span>/8</p>
+                </div>
+                <button class="reset-btn" onclick="resetMemory()">🔄 Neu Starten</button>
+            </div>
+            <div class="memory-grid" id="memory-grid">
+                <!-- Wird mit JavaScript gefüllt -->
+            </div>
+        </section>
+
+        <!-- FORMEN SPIEL -->
+        <section id="shapes-game" class="game-section">
+            <div class="game-header">
+                <h2>🔷 Formen Erkennen</h2>
+                <div class="score-board">
+                    <p>Punkte: <span id="shapes-score">0</span></p>
+                </div>
+                <button class="reset-btn" onclick="resetShapes()">🔄 Neu Starten</button>
+            </div>
+            <div class="shapes-container">
+                <div class="shape-display">
+                    <p id="shape-question">Welche Form siehst du?</p>
+                    <div id="shape-image" class="shape-image"></div>
+                </div>
+                <div class="shape-options" id="shape-options">
+                    <!-- Wird mit JavaScript gefüllt -->
+                </div>
+            </div>
+        </section>
+
+        <!-- FARBEN SPIEL -->
+        <section id="colors-game" class="game-section">
+            <div class="game-header">
+                <h2>🎨 Farben Lernen</h2>
+                <div class="score-board">
+                    <p>Punkte: <span id="colors-score">0</span></p>
+                </div>
+                <button class="reset-btn" onclick="resetColors()">🔄 Neu Starten</button>
+            </div>
+            <div class="colors-container">
+                <div class="color-display">
+                    <p id="color-question">Welche Farbe ist das?</p>
+                    <div id="color-box" class="color-box"></div>
+                </div>
+                <div class="color-options" id="color-options">
+                    <!-- Wird mit JavaScript gefüllt -->
+                </div>
+            </div>
+        </section>
+
+        <!-- ZAHLEN SPIEL -->
+        <section id="counting-game" class="game-section">
+            <div class="game-header">
+                <h2>🔢 Zahlen Zählen</h2>
+                <div class="score-board">
+                    <p>Punkte: <span id="counting-score">0</span></p>
+                </div>
+                <button class="reset-btn" onclick="resetCounting()">🔄 Neu Starten</button>
+            </div>
+            <div class="counting-container">
+                <div class="counting-display">
+                    <p id="counting-question">Wie viele siehst du?</p>
+                    <div id="counting-items" class="counting-items">
+                        <!-- Wird mit JavaScript gefüllt -->
+                    </div>
+                </div>
+                <div class="counting-options" id="counting-options">
+                    <!-- Wird mit JavaScript gefüllt -->
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>🌈 Viel Spaß beim Spielen und Lernen! 🌈</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
